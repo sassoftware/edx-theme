@@ -1,4 +1,6 @@
-## mako
+## mako 
+<%namespace name='static' file='static_content.html'/>
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
 <%! 
   from django.core.urlresolvers import reverse 
   from edxmako.shortcuts import marketing_link
@@ -8,6 +10,7 @@
     <div class="colophon">
       <nav class="nav-colophon">
         <ol>
+          <li><a href="${marketing_link('ABOUT')}">About</a></li>
           <li><a href="${reverse('tos')}">Terms of Service</a></li>
           <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
           <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
@@ -17,33 +20,45 @@
           <li><a href="${marketing_link('FAQ')}">Help</a></li>
         </ol>
       </nav>
+      <div class="colophon-about">
+        <img src="${static.url('images/header-logo.png')}"/>
+        <p>EDX is a non-profit created by founding partners Harvard and MIT whose mission is to bring the best of higher education to students of all ages anywhere in the world, wherever there is Internet access. EDX's free online MOOCs are interactive and subjects include computer science, public health, and artificial intelligence.</p>
+      </div>
     </div>
     <div class="references">
-      <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
-    </div>
+      <nav class="nav-social">
+        <ul>
+<!--           <li class="nav-social-01">
+            <a href="http://www.meetup.com/edX-Global-Community/" rel="external">
+              <img src="${static.url('images/social/ico-social-meetup.png')}" alt="edX on Meetup" />
+            </a>
+          </li> -->
+          <li class="nav-social-02">
+            <a href="http://www.facebook.com/EdxOnline" rel="external">
+              <img src="${static.url('images/social/ico-social-facebook.png')}" alt="edX on Facebook" />
+            </a>
+          </li>
+  <!--         <li class="nav-social-03">
+            <a href="https://twitter.com/edXOnline" rel="external">
+              <img src="${static.url('images/social/ico-social-twitter.png')}" alt="edX on Twitter" />
+            </a>
+          </li>
+          <li class="nav-social-04">
+            <a href="https://plus.google.com/108235383044095082735/posts" rel="external">
+              <img src="${static.url('images/social/ico-social-google.png')}" alt="edX on Google+" />
+            </a>
+          </li>
+          <li class="nav-social-05">
+            <a href="http://youtube.com/user/edxonline" rel="external">
+              <img src="${static.url('images/social/ico-social-youtube.png')}" alt="edX on YouTube" />
+            </a>
+          </li> -->
+        </ul>
+      </nav>
+
+      <p class="copyright">© 2014 UNC Online, some rights reserved.</p>
+
+      </div>
   </footer>
 </div>
 
-<div id="su-footer">
-  <div class="su-container">
-    <div class="su-row">
-      <div id="su-footer-logo" class="span2">
-        <a href="http://www.stanford.edu">
-          <img src="https://www.stanford.edu/su-identity/images/footer-stanford-logo@2x.png" alt="Stanford University" width="105" height="49"/>
-        </a>
-      </div>
-      <div id="su-footer-text" class="span10">
-        <ul>
-          <li class="home"><a href="http://www.stanford.edu">SU Home</a></li>
-          <li class="maps alt"><a href="http://visit.stanford.edu/plan/maps.html">Maps &amp; Directions</a></li>
-          <li class="search-stanford"><a href="http://www.stanford.edu/search/">Search Stanford</a></li>
-          <li class="terms alt"><a href="http://www.stanford.edu/site/terms.html">Terms of Use</a></li>
-          <li class="copyright"><a href="http://www.stanford.edu/site/copyright.html">Copyright Complaints</a></li>
-        </ul>
-        <div class="clear"></div>
-        <p class="copyright vcard">&copy; <span class="fn org">Stanford University</span>, <span class="adr"> <span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span> </span></p>
-      </div>
-      <div style="clear: both;"></div>
-    </div>
-  </div>
-</div>
