@@ -181,7 +181,7 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: url('../themes/uncga/images/uncga-homepage-bg.jpg');
+$homepage-bg-image: url('../themes/sas/images/uncga-homepage-bg.jpg');
 
 $login-banner-image: none;
 $register-banner-image: none;
@@ -203,6 +203,22 @@ $register-banner-image: none;
 @mixin footer_references_style {
     margin: 0 !important;
     text-align: right;
+}
+
+//-----------
+// SAS Styles
+//-----------
+.header .mod-header .header-branding {
+    background-position: left top;
+    background-size: 180px,102px;
+}
+.header .mod-header .header-branding {
+    display: block;
+    width: 180px;
+    height: 46px;
+    margin: 10px 0;
+    text-indent: -999em;
+    background: url('clientlibs/css/img/sas-TPTK-sprite.png') no-repeat left -150px;
 }
 
 //-----------
