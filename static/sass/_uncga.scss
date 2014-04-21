@@ -38,7 +38,10 @@ $black-80: #585754;
 //  Font Assignment
 //-----------------
 
+//$theme-sans-font: 'Source Sans';
 $theme-sans-font: 'Source Sans';
+$tahoma: 'Tahoma';
+$sans-serif: 'Open Sans', $tahoma, sans-serif; 
 $sans-serif: $theme-sans-font, $sans-serif;
 $body-font-family: $sans-serif;
 
@@ -188,7 +191,15 @@ $register-banner-image: none;
 
 //$video-thumb-url: '../images/courses/video-thumb.jpg';
 
+.lightItUp {
+    background: yellow;
+}
 
+.testIt {
+    height: 389;
+    width: 1293;
+    background: yellow;
+}
 
 //-----------------
 //  Mixin Styles
@@ -217,6 +228,11 @@ $register-banner-image: none;
     background-image: linear-gradient(180deg, rgba(200, 200, 200, 0) 0%, #c8c8c8 50%, rgba(200, 200, 200, 0));
     height: 1px;
     width: 100%
+}
+
+.course-catalog {
+    color: #3c3c3c;
+    font: 400 1.4em/1.4em Tahoma, Geneva, sans-serif;
 }
 
 .home .university-partners::before, .home .university-partners::after {
