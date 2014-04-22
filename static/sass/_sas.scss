@@ -16,6 +16,10 @@ $cardinal-bg: #e9afaf; //Selected Content BG Color, ie. calendar          ***Cus
 //UNC Color Variables
 $unc-green: #006666; // Link Color
 
+//SAS Color Variables
+$sas-gray: #999999; // Link Color
+$sas-blue: #3A75C4;
+
 
 
 //Gray Color Variables
@@ -29,7 +33,9 @@ $white: $gray-1;
 
 $m-gray-d3: #646668;
 
-$black: #2e2d29;
+$black: white;
+
+//$black: #2e2d29;
 $black-80: #585754;
 
 
@@ -76,18 +82,18 @@ $base-font-color: $black;
 $lighter-base-font-color: $black-80;
 $very-light-text: $gray-1;
 
-$link-color: $unc-green;
-$link-color-d1: $unc-green;
+$link-color: $sas-gray;
+$link-color-d1: $sas-gray;
 $link-hover: $cardinal-light;
 $site-status-color: $cardinal-bg;
 
-$header-graphic-super-color: $unc-green;
+$header-graphic-super-color: $sas-gray;
 $header-graphic-sub-color: $lighter-base-font-color;
 
-$header-link-color: $unc-green;
+$header-link-color: $sas-gray;
 $header-link-hover: $cardinal-light;
 
-$button-color: $unc-green;
+$button-color: $sas-gray;
 $button-archive-color: #eee;
 
 $shadow-color: $gray;
@@ -98,16 +104,16 @@ $button-bg-color: transparent;
 $button-bg-hover-color: $gray-1;
 
 // actions - primary
-$action-primary-bg: $unc-green;
+$action-primary-bg: $sas-gray;
 $action-primary-fg: $gray-2;
 $action-primary-shadow: none;
 
 // focused - hover/active pseudo states
-$action-primary-focused-bg: $unc-green;
+$action-primary-focused-bg: $sas-gray;
 $action-primary-focused-fg: $gray-1;
 
 // current or active navigation item
-$action-primary-active-bg: $unc-green;
+$action-primary-active-bg: $sas-gray;
 $action-primary-active-fg: $gray-1;
 $action-primary-active-shadow: none;
 $action-primary-active-focused-fg: $gray-2;
@@ -177,6 +183,8 @@ $header_image_margin: -77px;
 
 //FOOTER MARGIN
 $footer_margin: ($baseline/4) 0;
+//FOOTER WRAPPER
+$footer-bg: $sas-blue;
 
 //-----------------
 //  CSS BG Images
@@ -208,12 +216,11 @@ $register-banner-image: none;
 //-----------
 // SAS Styles
 //-----------
-.header .mod-header .header-branding {
+.header-branding {
     background-position: left top;
     background-size: 180px,102px;
 }
-.header .mod-header .header-branding {
-    display: block;
+.header-branding { 
     width: 180px;
     height: 46px;
     margin: 10px 0;
