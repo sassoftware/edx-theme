@@ -33,7 +33,7 @@ $white: $gray-1;
 
 $m-gray-d3: #646668;
 
-$black: white;
+$black: gray;
 
 //$black: #2e2d29;
 $black-80: #585754;
@@ -45,8 +45,12 @@ $black-80: #585754;
 //-----------------
 
 $theme-sans-font: 'Source Sans';
+$tahoma: 'Helvetica';
+$sans-serif: 'avenir-med', $tahoma, sans-serif; 
 $sans-serif: $theme-sans-font, $sans-serif;
-$body-font-family: $sans-serif;
+//$theme-sans-font: 'Source Sans';
+//$sans-serif: $theme-sans-font, $sans-serif;
+//$body-font-family: $sans-serif;
 
 $theme-serif-font: 'Crimson Text';
 $serif: $theme-serif-font, $serif;
@@ -189,7 +193,7 @@ $footer-bg: $sas-blue;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: url('../themes/sas/images/uncga-homepage-bg.jpg');
+$homepage-bg-image: url('../themes/sas/images/sas-homepage-bg.jpg');
 
 $login-banner-image: none;
 $register-banner-image: none;
@@ -216,6 +220,9 @@ $register-banner-image: none;
 //-----------
 // SAS Styles
 //-----------
+.bodystyling {
+    background-color: #003C5D;
+}
 .header-branding {
     background-position: left top;
     background-size: 180px,102px;
@@ -228,9 +235,29 @@ $register-banner-image: none;
     background: url('../themes/sas/images/sas-TPTK-sprite.png') no-repeat left -150px;
 }
 
+.wrapper-footer footer span{
+    color: #BBBBBC;
+}
+.wrapper-footer footer a:link, 
+.wrapper-footer footer a:visited, 
+.wrapper-footer footer a:hover, 
+.wrapper-footer footer a:focus, 
+.wrapper-footer footer a:active {
+    color: #BBBBCC;
+}
+
+.wrapper-footer footer .references .copyright,
+.wrapper-footer footer .colophon .nav-colophon li a:link,
+.wrapper-footer footer .colophon .nav-colophon li a:hover, 
+.wrapper-footer footer .colophon .nav-colophon li a:focus, 
+.wrapper-footer footer .colophon .nav-colophon li a:active {
+    color: white;
+}
 //-----------
 // UNC Styles
 //-----------
+
+
 
 .home .university-partners hr::after, .course-info .container nav::after,
 .course-info section.outside-app nav::after, .course-info .course-sidebar header::after,
