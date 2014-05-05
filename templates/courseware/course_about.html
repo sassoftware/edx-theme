@@ -255,7 +255,7 @@
                 ).replace(u" ", u"+")
                 tweet_action = u"http://twitter.com/intent/tweet?text={tweet_text}".format(tweet_text=tweet_text)
 
-                facebook_link = microsite.get_value('course_about_facebook_link', 'http://www.facebook.com/uncchapelhill')
+                facebook_link = microsite.get_value('course_about_facebook_link', 'http://www.facebook.com/unconlinemoocpage')
 
                 email_subject = u"mailto:?subject={subject}&body={body}".format(
                     subject=_("Take a course today with {platform}").format(platform=platform_name),
