@@ -66,11 +66,55 @@
     <div class="colophon">
       <nav class="nav-colophon">
         <ol>
-          <li><a href="/about">About</a></li>
-          <li><a href="/tos">Terms of Service</a></li>
-          <li><a href="/tos#privacy">Privacy Policy</a></li>
-          <li><a href="/honor">Honor Code</a></li>
-          <li><a href="/tos#copyright">Copyright</a></li>
+          <li><a href="${marketing_link('ABOUT')}">About</a></li>
+          <li><a href="${reverse('tos')}">Terms of Service</a></li>
+          <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
+          <li><a href="${reverse('honor')}">Honor Code</a></li>
+          <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
+<!--           <li><a href="${reverse('about_edx')}#careers">Careers</a></li>
+          <li><a href="${reverse('about_edx')}#contact">Contact</a></li> -->
+          <li><a href="${marketing_link('FAQ')}">Help</a></li>
+          <li><a href="http://code.edx.org">OpenEdX</a></li>
+        </ol>
+      </nav>
+      <br/><br/>
+  
+    </div>
+    <div class="references">
+<!--       <nav class="nav-social"> -->
+<!--         <ul> -->
+<!--           <li class="nav-social-01">
+            <a href="http://www.meetup.com/edX-Global-Community/" rel="external">
+              <img src="${static.url('images/social/ico-social-meetup.png')}" alt="edX on Meetup" />
+            </a>
+          </li> -->
+<!--           <li class="nav-social-02">
+            <a href="http://www.facebook.com/unconlinemoocpage" rel="external">
+              <img src="${static.url('images/social/ico-social-facebook.png')}" alt="UNC Online on Facebook" />
+            </a>
+          </li> -->
+  <!--         <li class="nav-social-03">
+            <a href="https://twitter.com/edXOnline" rel="external">
+              <img src="${static.url('images/social/ico-social-twitter.png')}" alt="edX on Twitter" />
+            </a>
+          </li>
+          <li class="nav-social-04">
+            <a href="https://plus.google.com/108235383044095082735/posts" rel="external">
+              <img src="${static.url('images/social/ico-social-google.png')}" alt="edX on Google+" />
+            </a>
+          </li>
+          <li class="nav-social-05">
+            <a href="http://youtube.com/user/edxonline" rel="external">
+              <img src="${static.url('images/social/ico-social-youtube.png')}" alt="edX on YouTube" />
+            </a>
+          </li> -->
+<!--         </ul>
+      </nav> -->
+
+      <p class="copyright">© 2014 UNC Online, some rights reserved.</p>
+
+      </div>
+  </footer>
 <!--           <li><a href="/about#careers">Careers</a></li>
           <li><a href="/about#contact">Contact</a></li> -->
           <li><a href="/faq">Help</a></li>
