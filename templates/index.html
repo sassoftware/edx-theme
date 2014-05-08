@@ -50,15 +50,9 @@
             <div class="secondary-actions">
               <div class="social-sharing">
                 <div class="sharing-message">${_("Stay up to date with all {platform_name} has to offer!").format(platform_name=settings.PLATFORM_NAME)}</div>
-                <a href="https://twitter.com/edXOnline" class="share">
-                  <img src="${static.url('images/social/twitter-sharing.png')}">
-                </a>
                 <a href="http://www.facebook.com/EdxOnline" class="share">
                   <img src="${static.url('images/social/facebook-sharing.png')}">
-                </a>
-                <a href="https://plus.google.com/108235383044095082735/posts" class="share">
-                  <img src="${static.url('images/social/google-plus-sharing.png')}">
-                </a>
+                </a> 
               </div>
             </div>
           </section>
@@ -95,16 +89,7 @@
   </section>
 </section>
 
-<section id="video-modal" class="modal home-page-video-modal video-modal">
-  <div class="inner-wrapper">
-    <%
-      youtube_video_id = homepage_promo_video_youtube_id
-      if self.stanford_theme_enabled():
-        youtube_video_id = "2gmreZObCY4"
-    %>
-    <iframe width="640" height="360" src="//www.youtube.com/embed/${youtube_video_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
+
 
 <%block name="js_extra">
    <script type="text/javascript">
