@@ -220,6 +220,11 @@ $register-banner-image: none;
 // UNC Styles
 //-----------
 
+.course-info, .inner-wrapper, .about, li {
+        color: $base-font-color;
+        font: normal 1em/1.6em $serif;
+        margin: 0px;
+} 
 
 .home .university-partners hr::after, .course-info .container nav::after,
 .course-info section.outside-app nav::after, .course-info .course-sidebar header::after,
