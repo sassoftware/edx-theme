@@ -183,7 +183,7 @@ $course-header-bg: transparentize($gray-1, .1);
 //$modal-bg-color: $gray-1;
 
 //TOP HEADER IMAGE MARGIN
-$header_image_margin: -77px;
+$header_image_margin: 0px;
 
 //FOOTER MARGIN
 $footer_margin: ($baseline/4) 0;
@@ -254,10 +254,15 @@ $register-banner-image: none;
     color: white;
 }
 //-----------
-// UNC Styles
+// SAS Styles
 //-----------
 
 
+.course-info, .inner-wrapper, .about, li {
+        color: $base-font-color;
+        font: normal 1em/1.6em $serif;
+        margin: 0px;
+} 
 
 .home .university-partners hr::after, .course-info .container nav::after,
 .course-info section.outside-app nav::after, .course-info .course-sidebar header::after,
