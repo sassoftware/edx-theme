@@ -176,7 +176,7 @@ $course-header-bg: transparentize($gray-1, .1);
 //$modal-bg-color: $gray-1;
 
 //TOP HEADER IMAGE MARGIN
-$header_image_margin: -77px;
+$header_image_margin: 0px;
 
 //FOOTER MARGIN
 $footer_margin: ($baseline/4) 0;
@@ -219,6 +219,11 @@ $register-banner-image: none;
 //-----------
 // UNC Styles
 //-----------
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
 
 .course-info, .inner-wrapper, .about, li {
         color: $base-font-color;
