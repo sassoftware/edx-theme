@@ -1,0 +1,302 @@
+/**
+ * sas-identity.css
+ * ========================================================
+ * Custom base styles
+ * Last edited: 4/19/2013 by Nate Hardison <nate@edx.org>
+ */
+
+#sas-header .sas-container,
+#sas-footer .sas-container {
+  margin: 0 auto;
+}
+
+#sas-header .span2,
+#sas-footer .span2 {
+  display: block;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#sas-header .span10,
+#sas-footer .span10 {
+  display: block;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#sas-header .sas-container:after,
+#sas-footer .sas-container:after {
+  clear: both;
+}
+
+#sas-header .row:after,
+#sas-footer .row:after {
+  clear: both;
+}
+
+/* Background gradient */
+#sas-header {
+  background: #8c1515;
+  box-shadow: inset 0 -4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
+  min-height: 30px;
+}
+
+#sas-footer,
+#sas-footer .sas-container {
+  background: #8c1515;
+  color: #e3dfd5;
+  box-shadow: inset 0 4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
+}
+
+/* Prevent flush left */
+#sas-header .sas-container img {
+  padding: 4px 0 0 10px;
+}
+
+#sas-footer a {
+  color: #e3dfd5;
+}
+
+#sas-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Prevent horizontal scroll bar */
+#sas-footer .sas-container {
+  padding: 3px 7px 20px;
+}
+
+#sas-footer .sas-container .unc-row {
+  margin: 30px 0 0;
+}
+
+/* Align logo and text */
+#sas-footer-logo {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+#sas-footer-text {
+  margin-top: 0;
+}
+
+#sas-footer-text ul {
+  margin: 2px 0 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+#sas-footer-text ul li {
+  display: block;
+  list-style: none;
+}
+
+#sas-footer-text ul li a {
+  font: 13px 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+  text-decoration: none;
+}
+
+#sas-footer p.copyright {
+  font: 11px 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 30px 0 0;
+  line-height: 1.5em;
+  color: #e3dfd5;
+}
+
+#sas-footer p.copyright span {
+  color: #e3dfd5;
+}
+
+/* Footer two columns */
+#sas-footer .span2 {
+  width: 48%;
+  float: left;
+}
+
+#sas-footer .span10 {
+  width: 48%;
+  float: right;
+}
+
+#sas-footer img {
+  margin: 0 auto;
+  display: block;
+}
+
+/* Clear the floats */
+#sas-footer .clear {
+  clear: both;
+}
+
+/*
+========================================================
+Media queries
+*/
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+  /* Prevent double background gradient */
+  #sas-footer .sas-container {
+    background:none;
+    box-shadow:none;
+  }
+
+  #bottom-text {
+    margin-top:2px;
+  }
+
+  /* Remove left padding */
+  #sas-header .sas-container img {
+    padding:4px 0 0;
+  }
+
+  /* Bootstrap style */
+  #sas-header .sas-container,
+  #sas-footer .sas-container {
+    width:724px;
+  }
+
+  #sas-footer .sas-container .unc-row {
+    margin:30px 0 0 -20px;
+  }
+  /* Footer single column */
+  #sas-footer .span2 {
+    float:left;
+    width:104px;
+    padding-left:8px; /* Prevent flush left */
+  }
+  /* Bootstrap style */
+  #sas-footer .span10 {
+    width:600px;
+    margin-left:20px;
+    margin:0 12px 0 20px;
+    float:left;
+  }
+
+  #sas-footer img {
+    margin:0 auto;
+  }
+
+  #sas-footer ul li.alt {
+  	clear:right;
+  }
+  /* Footer two column */
+  #sas-footer ul {
+    width:100%;
+    float:left;
+  }
+
+  #sas-footer ul li {
+  	width:auto;
+  	margin:0 13px 3px 0;
+  	padding:0;
+  	float:none;
+  	clear:left;
+    display:inline-block;
+  }
+
+  #bottom-logo {
+    margin:-5px 0 10px;
+  }
+
+  #sas-footer .clear {
+    clear:none;
+  }
+
+  p.copyright {
+    text-align:left;
+    padding-left:17%;
+    padding-top:25px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  /* Bootstrap style */
+  #sas-header .sas-container,
+  #sas-footer .sas-container {
+    width:940px;
+  }
+
+  #sas-footer .span2 {
+    width:140px;
+  }
+
+  #sas-footer .span10 {
+    width:780px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Bootstrap style */
+  
+  #sas-header .sas-container,
+  #sas-footer .sas-container {
+    width:1180px;
+  }
+
+  #sas-footer .span2 {
+    width:170px;
+  }
+
+  #sas-footer .span10 {
+    width:970px;
+  }
+
+  p.copyright {
+    padding-left:16%;
+  }
+}
+
+/*
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+/*html, body {*/
+	/*height: 100%;*/
+/*}*/
+/*#unc-wrap {*/
+	/*min-height: 100%;*/
+/*}*/
+/*#unc-content {*/
+	/*overflow:visible;*/
+	/*padding-bottom: 120px; [> must be same height as the footer <]*/
+/*}*/
+/*#sas-footer {*/
+	/*position: relative;*/
+	/*margin-top: -120px; [> negative value of footer height <]*/
+	/*height: 120px;*/
+	/*clear:both;*/
+/*} */
+
+/*[> IE6/7 uses media, <]*/
+/*@media, {*/
+  /*#sas-footer {*/
+    /*height: 219px;*/
+  /*}*/
+/*}*/
+
+/*[> IE8 uses \0/ <]*/
+/*@media all {*/
+  /*#sas-footer {*/
+    /*height: 196px\0/;*/
+  /*}*/
+/*}*/
+
+/*[>Opera Fix<]*/
+	/*body:before { [> thanks to Maleika (Kohoutec)<]*/
+	/*content:"";*/
+	/*height:100%;*/
+	/*float:left;*/
+	/*width:0;*/
+	/*margin-top:-32767px;[> thank you Erik J - negate effect of float<]*/
+/*}*/
