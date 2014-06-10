@@ -30,13 +30,94 @@
 
 <body class="{% block bodyclass %}{% endblock %} lang_{{LANGUAGE_CODE}}">
   <a class="nav-skip" href="{% block nav_skip %}#content{% endblock %}">{% trans "Skip to this view's content" %}</a>
-  {% include "navigation.html" %}
+  <header class="global " aria-label="Global Navigation">
+    <nav>
+    <h1 class="logo">
+      <a href="/">
+        
+            <a href="/" class="header-branding">SAS | The Power to Know</a>
+        
+      </a>
+    </h1>
+
+
+    <ol class="left nav-global">
+      
+      
+          <li class="nav-global-04">
+            <a class="cta cta-register" href="/register">Register Now</a>
+          </li>
+    </ol>
+
+    <ol class="right nav-courseware">
+    <li class="nav-courseware-01">
+          <a class="cta cta-login" href="/login">Log in</a>
+    </li>
+    </ol>
+  </nav>
+</header>
   <div class="content-wrapper" id="content">
     {% block body %}{% endblock %}
     {% block bodyextra %}{% endblock %}
   </div>
 
-  {% include "theme-footer.html" %}
+  <div class="wrapper-footer">
+  <footer>
+    <div class="colophon">
+      <nav class="nav-colophon">
+        <ol>
+          <li><a href="${marketing_link('ABOUT')}">About</a></li>
+          <li><a href="${reverse('tos')}">Terms of Service</a></li>
+          <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
+          <li><a href="${reverse('honor')}">Honor Code</a></li>
+          <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
+          <li><a href="${reverse('about_edx')}#careers">Careers</a></li>
+          <li><a href="${reverse('about_edx')}#contact">Contact</a></li>
+          <li><a href="${marketing_link('FAQ')}">Help</a></li>
+        </ol>
+      </nav>
+      <br/><br/>
+      <div class="colophon-about">
+        <img src="/static/images/header-logo.png"/>
+        <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
+      </div>
+    </div>
+    <div class="references">
+      <nav class="nav-social">
+        <ul>
+<!--           <li class="nav-social-01">
+            <a href="http://www.meetup.com/edX-Global-Community/" rel="external">
+              <img src="${static.url('images/social/ico-social-meetup.png')}" alt="edX on Meetup" />
+            </a>
+          </li> -->
+          <li class="nav-social-02">
+            <a href="http://www.facebook.com/SASsoftware" rel="external">
+              <img src="/static/images/social/ico-social-facebook.png" alt="SAS on Facebook" />
+            </a>
+          </li>
+           <li class="nav-social-03">
+            <a href="https://twitter.com/SASsoftware" rel="external">
+              <img src="/static/images/social/ico-social-twitter.png" alt="SAS on Twitter" />
+            </a>
+          </li>
+  <!--        <li class="nav-social-04">
+            <a href="https://plus.google.com/108235383044095082735/posts" rel="external">
+              <img src="${static.url('images/social/ico-social-google.png')}" alt="SAS on Google+" />
+            </a>
+          </li>
+          <li class="nav-social-05">
+            <a href="http://youtube.com/user/SASsoftware" rel="external">
+              <img src="${static.url('images/social/ico-social-youtube.png')}" alt="SAS on YouTube" />
+            </a>
+          </li> -->
+        </ul>
+      </nav>
+
+      <p class="copyright">© 2014 SAS Online, some rights reserved.</p>
+
+      </div>
+  </footer>
+</div>
 
   {% compressed_js 'application' %}
   {% compressed_js 'module-js' %}
