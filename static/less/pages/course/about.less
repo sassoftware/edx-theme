@@ -18,59 +18,103 @@ section.course-info {
             background: none;
 
             .table {
-                .clearfix();
-
                 background-color: @color-background;
                 display: block;
                 border-radius: @default-border-radius;
 
-                .media {
-                    .size(100%, auto);
-                    .make-md-column(4);
-                    .make-lg-column(4);
-
-                    margin: 0;
-                    padding: 15px 15px 15px 0;
-                    display: block;
-
-                    .hero {
-                        .square(auto);
-
-                        border: 0 none;
-                        padding: 0 0 56.25% 0;
-                        position: relative;
-
-                        img {
-                            .square(100%);
-
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                        }
-                    }
-                }
-
                 .intro {
                     .square(auto);
-                    .make-md-column(8);
-                    .make-lg-column(8);
 
                     display: block;
 
-                    hgroup {
-                        box-shadow: none;
-                        border-bottom: 1px solid @color-border;
+                    .row.top-row {
+                        .media {
+                            .size(100%, auto);
+                            .make-md-column(4);
+                            .make-lg-column(4);
 
-                        h1 {
-                            text-shadow: none;
-                            font: inherit;
-                            font-size: 1.6em;
-                            line-height: 1.4em;
-                            font-weight: 500;
-                            color: inherit;
-                            letter-spacing: normal;
-                            text-align: left;
+                            padding: 0;
+                            display: block;
+
+                            .hero {
+                                .square(auto);
+
+                                border: 0 none;
+                                padding: 0 0 56.25% 0;
+                                position: relative;
+
+                                img {
+                                    .square(100%);
+
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                }
+                            }
+                        }
+
+                        .metadata {
+                            .size(100%, auto);
+
+                            .make-md-column(8);
+                            .make-lg-column(8);
+
+                            margin: -8px 0 0 0;
+
+                            @media (max-width: @screen-sm-max) {
+                                padding: 0;
+                                margin: 0;
+                            }
+
+                            hgroup {
+                                color: inherit;
+
+                                h1 {
+                                    font: inherit;
+                                    font-size: 1.6em;
+                                    line-height: 1.4em;
+                                    font-weight: @headings-font-weight;
+                                    color: inherit;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                    margin: 0;
+                                }
+                            }
+
+                            .short-description {
+                                padding-top: 20px;
+                            }
+                        }
+                    }
+
+                    .social-sharing {
+                        float: left;
+                        display: block;
+                        margin: 20px 0 0 0;
+                        padding-right: 10px;
+
+                        @media (max-width: @screen-sm-max) {
+                            float: none;
+                            text-align: center;
                             margin: 0;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            margin-right: 10px;
+
+                            span {
+                                font-size: 42px;
+                                line-height: 44px;
+                                transition: all .1s ease-in;
+                                color: @color-success;
+                            }
+
+                            &:hover {
+                                span {
+                                    color: fadeout(@color-success, 50%);
+                                }
+                            }
                         }
                     }
 
@@ -137,66 +181,14 @@ section.course-info {
         }
     }
 
-    .course-sidebar {
-        .size(100%, auto);
-        .make-lg-column(4);
-        .make-md-column(4);
-
-        margin: 20px 0 0 0;
-
-        .course-summary {
-            box-shadow: none;
-            border: 0 none;
-            padding: 0;
-            margin: 0;
-
-            header {
-                padding: 0 0 15px 0;
-                margin: 0 0 15px 0;
-                border-bottom: 1px solid @color-border;
-
-                &:after {
-                    display: none;
-                }
-            }
-
-            .important-dates {
-                padding: 0;
-
-                li {
-                    border: 0 none;
-                    margin: 0;
-                    padding: 0;
-
-                    p {
-                        font: inherit;
-                        color: inherit;
-                    }
-
-                    span {
-                        font: inherit;
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
-    }
-
     .details {
         .square(auto);
-        .make-lg-column(8);
-        .make-md-column(8);
 
-        padding-left: 0;
         margin: 0;
         font: inherit;
 
-        nav {
-            display: none;
-        }
-
         .inner-wrapper {
-            margin: 0;
+            margin: 60px 0 0 0;
 
             table.course-summary {
                 .table-rounded(4px);
