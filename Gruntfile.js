@@ -43,7 +43,10 @@ module.exports = function (grunt) {
             browser: {
                 options: {
                     'browser': true,
-                    'jquery': true
+                    'jquery': true,
+                    'globals': {
+                        'IocCourses': true
+                    }
                 },
                 files: {
                     src: [
