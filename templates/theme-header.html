@@ -1,11 +1,23 @@
 ## mako
-<%! from django.core.urlresolvers import reverse %>
 <%namespace name='static' file='/static_content.html'/>
 <%inherit file="/navigation.html"/>
 
-## TODO: this will eventually be moved to the Sass
-<%block name="navigation_logo">
-  <img src="${static.url('themes/uncga/images/uncga-header-logo.png')}" height="35" alt="Home Page" />
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
+
+<%block name="navigation_top">
 </%block>
 
+<%block name="navigation_logo">
+  ${platform_name()}
+</%block>
 
+## When unauthenticated, only show the about page link
+<%block name="navigation_global_links">
+</%block>
+
+## When authenticated, show both the about page and find courses
+<%block name="navigation_global_links_authenticated">
+  <li class="nav-global-02">
+    <a href="${marketing_link('COURSES')}">Nos cours</a>
+  </li>
+</%block>

@@ -1,19 +1,4 @@
 ## mako
-
 <%namespace name='static' file='/static_content.html'/>
-<link rel="stylesheet" href="${static.url('themes/uncga/css/vendor/unc-identity.css')}" />
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic,400italic,700italic,900italic,' rel='stylesheet' type='text/css'>
-<!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      alert("Warning: you are using an unsupported browser\nand may be unable to use some features.\n\nWe suggest you use either Mozilla Firefox or\nGoogle Chrome.");
-    });
-  </script>
-<![endif]-->
-<!--[if IE 8]>
-  <link rel="stylesheet" href="${static.url('themes/uncga/css/vendor/ie8.css')}" /> 
-<![endif]-->
-<!--[if IE 7]>
-  <link rel="stylesheet" href="${static.url('themes/uncga/css/vendor/ie7.css')}" />
-<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="${static.url('themes/{theme_name}/css/main.css'.format(theme_name=settings.THEME_NAME))}" />
