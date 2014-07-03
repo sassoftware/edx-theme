@@ -157,16 +157,7 @@
         </div>
         <div class="social-sharing">
           % if microsite.get_value('course_about_show_social_links', True):
-            <%
-              course_about_url = "https://courses.ionisx.com{path}".format(path=reverse('about_course', args=[course.id.to_deprecated_string()]))
-              tweet_action = u"http://twitter.com/intent/tweet?text=Découvrez+le+cours+« {course_name} »+sur+@IONISx !+{course_about_url}".format(course_name=get_course_about_section(course, 'title'), course_about_url=course_about_url)
-            %>
-            <a href="${tweet_action}" target="_blank">
-              <span class="icon-twitter-sign"></span>
-            </a>
-            <a href="https://www.facebook.com/IONISx" target="_blank" class="facebook">
-              <span class="icon-facebook-sign"></span>
-            </a>
+
           % endif
         </div>
           <div class="main-cta">
@@ -204,7 +195,9 @@
                   ${_("Course is full")}
                 </span>
               %else:
-                <a href="#" class="register">S’inscrire à ce cours</a>
+                <a href="#" class="register">
+                  ${_("Register for {course.display_number_with_default}").format(course=course) | h}
+                </a>
                 <div id="register_error"></div>
               %endif
             </div>

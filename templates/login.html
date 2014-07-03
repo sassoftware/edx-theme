@@ -10,7 +10,7 @@
 <%block name="bodyclass">view-login</%block>
 
 <%block name="js_extra">
-  <script type="text/javascript" src="${static.url('themes/ionisx/js/form_validator.js')}"></script>
+  <script type="text/javascript" src="${static.url('themes/sas/js/form_validator.js')}"></script>
   <script type="text/javascript">
     $(function() {
 
@@ -38,6 +38,15 @@
     });
 
     (function() {
+      toggleSubmitButton(true);
+
+      $('#login-form').on('submit', function() {
+        toggleSubmitButton(false);
+      });
+
+      $('#login-form').on('ajax:error', function() {
+        toggleSubmitButton(true);
+      });
       $('#login-form').on('ajax:success', function(event, json, xhr) {
         if(json.success) {
           var u=decodeURI(window.location.search);
@@ -66,6 +75,23 @@
       });
 
     })(this);
+
+    function toggleSubmitButton(enable) {
+      var $submitButton = $('form .form-actions #submit');
+
+      if(enable) {
+        $submitButton.
+          removeClass('is-disabled').
+          removeProp('disabled').
+          html("${_('Log into My {platform_name} Account').format(platform_name=platform_name)} <span class='orn-plus'>+</span> ${_('Access My Courses')}");
+      }
+      else {
+        $submitButton.
+          addClass('is-disabled').
+          prop('disabled', true).
+          text("${_(u'Processing your account information…')}");
+      }
+    }
   </script>
 </%block>
 
@@ -103,11 +129,11 @@
 
         <ol class="list-input">
           <li class="field required text" id="field-email">
-            <input class="" id="email" type="email" name="email" value="" placeholder="Adresse email" data-required="true" aria-required="true" aria-described-by="email-tip" />
+            <input class="" id="email" type="email" name="email" value="" placeholder="Email Address" data-required="true" aria-required="true" aria-described-by="email-tip" />
             <span></span>
           </li>
           <li class="field required password" id="field-password">
-            <input id="password" type="password" placeholder="Mot de passe" name="password" value="" data-required="true" aria-required="true" />
+            <input id="password" type="password" placeholder="Password" name="password" value="" data-required="true" aria-required="true" />
             <span></span>
             <span class="tip tip-input">
               <a href="#forgot-password-modal" rel="leanModal" class="pwd-reset action action-forgotpw" id="forgot-password-link" role="button" aria-haspopup="true">${_('Forgot password?')}</a>

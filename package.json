@@ -1,19 +1,19 @@
 {
   "name": "edx-theme",
   "private": true,
-  "description": "Open edX theme for IONISx",
+  "description": "Open edX theme for UNCGA",
   "repository": {
     "type": "git",
-    "url": "git://github.com/IONISx/edx-theme.git"
+    "url": "git://github.com/sassoftware/edx-theme.git"
   },
   "scripts": {
     "test": "grunt test"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IONISx/edx-theme/issues"
+    "url": "https://github.com/sassoftware/edx-theme/issues"
   },
-  "homepage": "https://github.com/IONISx/edx-theme",
+  "homepage": "https://github.com/sassoftware/edx-theme",
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-less": "^0.11.0",

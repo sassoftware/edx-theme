@@ -1,10 +1,8 @@
 # edx-theme
 
-[![Build Status](https://travis-ci.org/IONISx/edx-theme.svg?branch=master)](https://travis-ci.org/IONISx/edx-theme)
 
 > Open edX responsive theme using [Bootstrap](http://getbootstrap.com/).
 
-![Screenshot](https://raw.githubusercontent.com/IONISx/edx-theme/docs/images/responsive.png)
 
 ## Getting started
 

@@ -54,7 +54,7 @@ header.global, header.global.slim {
             margin: 0.9em 0 0 0;
             padding: 0;
             text-shadow: none;
-            color: @color-background;
+            color: grey;
 
             @media (max-width: @screen-sm-max) {
                 display: none;
@@ -71,14 +71,14 @@ header.global, header.global.slim {
             > li > a {
                 padding: 0;
                 font-weight: 500;
-                color: @color-background;
+                color: grey;
 
                 &:hover {
-                    color: @white;
+                    color: @black;
                 }
 
                 &:focus {
-                    color: @white;
+                    color: @black;
                     text-decoration: underline;
                 }
             }
@@ -92,7 +92,7 @@ header.global, header.global.slim {
             margin: 0;
 
             > li > a.cta-login {
-                .ionisx-btn(@color-primary, @white);
+                .ionisx-btn(@color-primary, @unc-green);
             }
         }
 
@@ -100,7 +100,7 @@ header.global, header.global.slim {
             margin: 0;
 
             > li.primary > a {
-                .ionisx-btn(@color-primary, @white);
+                .ionisx-btn(@white, @unc-green);
 
                 border-radius: 0;
                 border-top-left-radius: 4px;
@@ -112,7 +112,7 @@ header.global, header.global.slim {
                 }
 
                 &.dropdown.active {
-                    .ionisx-btn-hover(@color-primary, @white);
+                    .ionisx-btn-hover(@unc-green, @white);
                 }
 
                 &.dropdown {
@@ -150,7 +150,7 @@ header.global, header.global.slim {
                     transition: all .1s ease-in;
                     border: 0 none;
                     padding: 3px 8px;
-                    color: @color-primary;
+                    color: @black;
 
                     > a {
                         border: 0 none;
@@ -167,7 +167,7 @@ header.global, header.global.slim {
 
                     &:hover {
                         background-color: @color-primary;
-                        color: @white;
+                        color: @black;
 
                         > a {
                             color: inherit;
