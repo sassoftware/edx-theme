@@ -1,25 +1,26 @@
-Overview
-========
-This directory stores UNC Online's theming files for its edX instance.
-We're storing the stuff here and then pulling it in to our instance
-when we deploy.
-
-We've organized the tree to mimic the directory structure of the edX
-codebase so that it's easy to tell where the files will end up upon
-deploy. We'll use a special settings file to set the template and
-staticfiles paths properly to point to these files.
-
-Theme Authoring
-===============
-The proposed theming solution for edX (see [this pull](https://github.com/edx/edx-platform/pull/1907)
-for more details) provides a number of hooks for themes to adjust
-both HTML and CSS to their liking.
+# edx-theme
 
 
-License
-=======
+> Open edX responsive theme using [Bootstrap](http://getbootstrap.com/).
 
-The code in this repo is licensed under the Apache 2.0 License.
-See [LICENSE.txt](LICENSE.txt) for more info.  The copyright for the UNC
-brands and assets (e.g. logo and images) are held by University of North Carolina.
 
+## Getting started
+
+First, install `grunt-cli` and `bower` globally (or not) in order to have the required build tools.
+
+    npm install -g grunt-cli bower
+
+Then fetch the local depedencies.
+
+    npm install
+    bower install
+
+Finally, run `grunt` to build the theme’s source files.
+`grunt` will watch for changes and re-build the output automatically.
+
+Run `grunt build` for a one time build.  
+Run `grunt test` to lint your source files as well.
+
+## License
+
+[MIT License](http://en.wikipedia.org/wiki/MIT_License)
