@@ -34,14 +34,11 @@ header.global, header.global.slim {
                 .size(@logo-img-width, 48px);
                 .text-hide();
 
-                background-image: url(@logo-img-path);
-                background-size: contain;
-                background-repeat: no-repeat;
-
+                background: url(@logo-img-path) no-repeat left -150px;
                 @media (max-width: @screen-xs-max) {
                     .size(@logo-sm-img-width, 48px);
 
-                    background-image: url(@logo-sm-img-path);
+                    background: url(@logo-sm-img-path) no-repeat left -150px;
                 }
             }
         }
@@ -92,7 +89,7 @@ header.global, header.global.slim {
             margin: 0;
 
             > li > a.cta-login {
-                .ionisx-btn(@color-primary, @sas-blue);
+                .ionisx-btn(@color-primary, @sas-gray);
             }
         }
 
@@ -100,7 +97,7 @@ header.global, header.global.slim {
             margin: 0;
 
             > li.primary > a {
-                .ionisx-btn(@white, @sas-blue);
+                .ionisx-btn(@white, @sas-gray);
 
                 border-radius: 0;
                 border-top-left-radius: 4px;
@@ -112,7 +109,7 @@ header.global, header.global.slim {
                 }
 
                 &.dropdown.active {
-                    .ionisx-btn-hover(@sas-blue, @white);
+                    .ionisx-btn-hover(@sas-gray, @white);
                 }
 
                 &.dropdown {
