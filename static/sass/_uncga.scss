@@ -1,28 +1,14 @@
 .our-carousel {
-	background-color: black !important;
-	background-image: url("../themes/uncga/images/uncga-homepage-bg-small.png");
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-	background-size: cover; background-repeat: no-repeat;
-	background-position: right;
-	height: 350px;
+    background-color: #0a0808 !important; // #211514
+    background-image: url("../themes/uncga/images/uncga-homepage-bg-small.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; background-repeat: no-repeat;
+    background-position: right;
+    height: 300px;
 }
 .our-carousel-image {  
-	float: right;
-	height: 480;
-}
-.welcomeAd {
-	text-align: left;
-	h1 {
-		text-align: left;
-		font-size: 40px !important;
-		margin-top: 5px;
-		margin-bottom: 5px;
-	}
-	color: white;
-
-	p {
-		max-width: 600px;
-	}
+    float: right;
+    height: 480;
 }
