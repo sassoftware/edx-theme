@@ -1,0 +1,34 @@
+.our-carousel {
+    background-color: #ccd4d6 !important; // #211514
+    background-image: url("../themes/sas/images/sas-homepage-bg.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; background-repeat: no-repeat;
+    background-position: right;
+    height: 300px;
+    @media screen and (max-width: 903px) {
+        background-image: none; 
+    }
+}
+.our-carousel::after {
+    @media screen and (max-width: 903px) { 
+        background-image: url("../themes/sas/images/sas-homepage-bg.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; background-repeat: no-repeat;
+        background-position: right; 
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+}
+.our-carousel-image {  
+    float: right;
+    height: 480;
+}
